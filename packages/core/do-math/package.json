@@ -1,0 +1,24 @@
+{
+  "name": "do-math",
+  "version": "1.0.0",
+  "main": "build/index.js",
+  "type": "module",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^15.0.1",
+    "ts-node": "^9.1.1",
+    "ts-standard": "^10.0.0",
+    "tslib": "^2.2.0",
+    "typescript": "^4.2.4"
+  },
+  "scripts": {
+    "build": "tsc",
+    "build:all": "lerna run build --scope do-math --include-filtered-dependencies",
+    "format": "ts-standard --fix",
+    "lint": "ts-standard",
+    "start": "node --experimental-modules ./build/index.js"
+  },
+  "dependencies": {
+    "math-library": "1.0.0"
+  }
+}

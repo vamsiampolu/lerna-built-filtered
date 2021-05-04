@@ -1,0 +1,21 @@
+{
+  "name": "lerna-build-filtered",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": true,
+  "license": "MIT",
+  "dependencies": {
+    "lerna": "^4.0.0"
+  },
+  "scripts": {
+    "init": "lerna init",
+    "info": "lerna info",
+    "list": "lerna list",
+    "build:core": "lerna run build --scope=math-library --include-filtered-dependencies",
+    "build:docker": "docker build . -t do-math:latest"
+  },
+  "workspaces": [
+     "packages/common/*",
+     "packages/core/*"
+  ]
+}
